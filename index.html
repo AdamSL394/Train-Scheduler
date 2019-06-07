@@ -12,7 +12,7 @@
   </head>
   <body>
     <container class=>
-        <div class="jumbotron jumbotron-fluid text-center">
+        <div class="jumbotron jumbotron-fluid text-center bg-warning">
                 <div class="container">
                   <h1 class="display-4">Crazy Train </h1>
                   <p class="lead">All Aboard hahahaha</p>
@@ -20,12 +20,68 @@
               </div>
     </container>
     <div class="card text-dark mb-3" style="max-width:100%;">
-            <div class="card-header bg-primary">Header</div>
+            <div class="card-header bg-primary text-white">Current Train Schedule</div>
             <div class="card-body">
-              <h5 class="card-title">Primary card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <table class="table table-light">
+                    <thead>
+                      <tr>
+                        <th scope="col">Train Name</th>
+                        <th scope="col">Destination</th>
+                        <th scope="col">Frequency(min)</th>
+                        <th scope="col">Next Arrival</th>
+                        <th scope="col">Minutes Away</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">3</th>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                      </tr>
+                    </tbody>
+                  </table>
             </div>
           </div>
+
+          <form>
+              <containter class="card justify-center" style="width: 80%;" >
+                <div class="card-header bg-primary text-white">Add Train</div>
+                <div class="form-group">
+                  <label for="exampleFormControlInput1 "class="margin mt-4">Train Name</label>
+                  <input type="text" class="form-control " id="exampleFormControlInput1" placeholder="Crazy Train">
+                </div>
+                <div class="form-group">
+                  <label for="exampleFormControlSelect1">Destination</label>
+                  <input type="text" class="form-control" id="exampleFormControlSelect3" placeholder="Long way away from home">
+                  
+                </div>
+                <div class="form-group">
+                  <label for="exampleFormControlSelect2">First Train Time (HH:mm-military time) </label>
+                  <input type="text" class="form-control" id="exampleFormControlSelect3" placeholder="Long way away from home">
+                 
+                </div>
+                <div class="form-group">
+                        <label for="exampleFormControlSelect2">Frequency (min)</label>
+                    <input type="text" class="form-control" id="exampleFormControlSelect3" placeholder="Every 5 minutes train come round">
+                    <a href="#" class="btn btn-primary mt-4">Go somewhere</a>
+                </div>
+              </form>
+            </containter>
+
+          
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
