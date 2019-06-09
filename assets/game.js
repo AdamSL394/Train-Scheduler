@@ -22,6 +22,18 @@ $(".btn").on("click",function(){
     var firstTrainTime= $("#firstTrainTime").val().trim();
     var frequency=$("#frequency").val().trim();
 
+    var trainDetail= moment(firstTrainTime,"HH:mm").subtract(1,"years");
+    console.log(trainDetail);
+
+    var currentTime =moment();
+    console.log("Current Time: " + moment(currentTime).format("hh:mm"));
+
+    
+
+
+
+
+
     database.ref().push({
       trainNameInput:trainNameInput,
         destinationInput:destinationInput,
@@ -36,9 +48,20 @@ $(".btn").on("click",function(){
   console.log(childsnapshot.val().firstTrainTime);
   console.log(childsnapshot.val().frequency);
 
-  $("#trainTable").append("<tr><td class='move'> " + childsnapshot.val().trainNameInput + "</td>" + "<td class='move'>"+ childsnapshot.val().destinationInput+ "</td>" + " <td class='move'>" + childsnapshot.val().firstTrainTime + "</td>" + "<td class='move'>" + childsnapshot.val().frequency + "</td> </tr>");
+
+
+  $("#trainTable").append("<tr><td class='move'> " + childsnapshot.val().trainNameInput + "</td>"+ "<hr>" + "<td class='move'>"+ childsnapshot.val().destinationInput+ "</td>" + " <td class='move'>" + childsnapshot.val().firstTrainTime + "</td>" + "<td class='move'>" + childsnapshot.val().frequency + "</td> </tr>");
   
+
   })
+  // console.log(firstTrainTime.diff(moment(), "months"));
+  // console.log(firstTrainTime.diff(moment(), "days"));
+  // console.log(firstTrainTime.diff(moment(), "weeks"));
+  // console.log(firstTrainTime.diff(moment(), "hours"));
+  // console.log(firstTrainTime.diff(moment(), "minutes"));
+
+
+  
 
 
 // });
