@@ -89,7 +89,10 @@ $(document).ready(function () {
     $("#trainTable").append("<tr><td class='move'> " + childsnapshot.val().trainNameInput + "</td>" + "<hr>" + "<td class='move'>" + childsnapshot.val().destinationInput + "</td>" + " <td class='move'>" + childsnapshot.val().frequency + "</td>" + "<td class='move'>" + childsnapshot.val().nextTrainTime + "</td> " + "<td>" + childsnapshot.val().minutesTillTrain + "</td> </tr>");
 
 
-
+    $("#trainNameInput").val("");
+    $("#destinationInput").val("");
+    $("#firstTrainTime").val("");
+    $("#frequency").val("");
 
 
   })
