@@ -24,5 +24,5 @@ The following will get up and running locally.
 Author
 Adam Lehrer
 
-![Train Scheduler]()
+![Train Scheduler](assets/images/CrazyTrain.png)
 
